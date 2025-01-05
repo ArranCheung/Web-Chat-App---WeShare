@@ -1,0 +1,89 @@
+﻿@page
+@model Web_Chat_App___WeShare.Pages.Account.CreateModel
+@{
+}
+
+<div id="cont">
+	<div class="container border" style="padding:20px" id="main">
+		<form method="post" id="formI">
+			<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+			<div class="form-group-row">
+				<div class="col-3">
+					<label asp-for="Credential.Username"></label>
+				</div>
+				<div class="col-5">
+					<input class="form-control" type="text" asp-for="Credential.Username" />
+				</div>
+				<span class="text-danger" asp-validation-for="Credential.Username"></span>
+			</div>
+			<div class="form-group-row">
+				<div class="col-3">
+					<label asp-for="Credential.Email"></label>
+				</div>
+				<div class="col-5">
+					<input class="form-control" type="email" asp-for="Credential.Email" />
+				</div>
+				<span class="text-danger" asp-validation-for="Credential.Email"></span>
+			</div>
+			<div class="form-group-row">
+				<div class="col-3">
+					<label asp-for="Credential.Password"></label>
+				</div>
+				<div class="col-5">
+					<input class="form-control" type="password" asp-for="Credential.Password" />
+				</div>
+				<span class="text-danger" asp-validation-for="Credential.Password"></span>
+			</div>
+			<div class="form-group-row">
+				<div class="col-5">
+					<input type="submit" class="btn btn-primary" value="Create" />
+				</div>
+				<div class="col-5">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<style>
+	#main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		height: 90vh;
+		overflow: hidden;
+	}
+
+	#cont{
+		background-color: rgb(81, 122, 95);
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		width: 50%;
+		height: 50%;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+
+	#formI {
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.form-group-row {
+		padding: 1.5%;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+
+	* {
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+	}
+
+	*::-webkit-scrollbar {
+		display: none; /* Chrome, Safari */
+	}
+
+</style>

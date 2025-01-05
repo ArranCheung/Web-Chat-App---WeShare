@@ -1,0 +1,57 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+<html>
+	<body id="main">
+		<table id="items">
+			<tr>
+				<td>
+					<h1 id="title">
+						WeShare
+					</h1>
+				</td>
+			</tr>
+			<tr>
+				<td> 
+					<label>A messaging platform made by </label>
+					<a href="https://www.linkedin.com/in/arran-cheung-69770731b/?originalSubdomain=uk">Arran Cheung</a>
+					<label> for Programming club</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>You must </label>
+					<a asp-page="/Account/Create">create an account</a>
+					<label>or </label>
+					<a asp-page="/Account/Login">login</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+
+
+
+<style>
+
+	#main{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	#items{
+		display: flex;
+		align-items: center;
+		width: 80%;
+		background-color: rgb(81, 122, 95);
+		padding: 10%;
+	}
+
+</style>
